@@ -18,7 +18,8 @@
   ~     along with HibernateJConsole.  If not, see <http://www.gnu.org/licenses />.
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<packaging>pom</packaging>
 	<modelVersion>4.0.0</modelVersion>
@@ -34,7 +35,6 @@
 
 	<properties>
 		<app.name>hibernate-jconsole</app.name>
-		<svn.tag>trunk</svn.tag>
 	</properties>
 
 	<modules>
@@ -81,32 +81,21 @@
 
 	<issueManagement>
 		<system>SourceForge BugTracker</system>
-		<url>https://sourceforge.net/tracker/?group_id=289306</url>
+		<url>https://sourceforge.net/p/hibernate-jcons/bugs/</url>
 	</issueManagement>
 
 	<scm>
-		<connection>scm:hg:http://hibernate-jcons.hg.sourceforge.net:8000/hgroot/hibernate-jcons/hibernate-jcons</connection>
-		<developerConnection>scm:hg:ssh://hibernate-jcons.hg.sourceforge.net/hgroot/hibernate-jcons/hibernate-jcons</developerConnection>
-		<url>http://hibernate-jcons.hg.sourceforge.net/hgweb/hibernate-jcons/</url>
+		<connection>scm:hg:http://hg.code.sf.net/p/hibernate-jcons/code</connection>
+		<developerConnection>scm:hg:https://hg.code.sf.net/p/hibernate-jcons/code</developerConnection>
+		<url>https://sourceforge.net/p/hibernate-jcons/code/ci/tip/tree/</url>
 	</scm>
 
 	<repositories>
-		<repository>
-			<id>maven.tinyjee.org</id>
-			<url>http://maven.tinyjee.org</url>
-		</repository>
 		<repository>
 			<id>repository.jboss.org</id>
 			<url>http://repository.jboss.org/nexus/content/groups/public-jboss/</url>
 		</repository>
 	</repositories>
-
-	<pluginRepositories>
-		<pluginRepository>
-			<id>maven.tinyjee.org</id>
-			<url>http://maven.tinyjee.org</url>
-		</pluginRepository>
-	</pluginRepositories>
 
 	<dependencies>
 		<dependency>
@@ -167,9 +156,9 @@
 					<artifactId>maven-site-plugin</artifactId>
 					<dependencies>
 						<dependency>
-							<groupId>org.tinyjee</groupId>
+							<groupId>org.tinyjee.dim</groupId>
 							<artifactId>doxia-include-macro</artifactId>
-							<version>1.0</version>
+							<version>1.1</version>
 						</dependency>
 					</dependencies>
 				</plugin>
