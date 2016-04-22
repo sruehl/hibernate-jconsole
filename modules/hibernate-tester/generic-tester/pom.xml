@@ -59,15 +59,9 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<groupId>org.hibernate</groupId>
-			<version>3.3.2.GA</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<artifactId>hibernate-jmx</artifactId>
-			<groupId>org.hibernate</groupId>
-			<version>3.3.2.GA</version>
+			<version>4.3.11.Final</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>

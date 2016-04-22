@@ -18,7 +18,8 @@
   ~     along with HibernateJConsole.  If not, see <http://www.gnu.org/licenses />.
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -40,22 +41,15 @@
         </dependency>
 
         <dependency>
-            <artifactId>ejb3-persistence</artifactId>
             <groupId>org.hibernate</groupId>
-            <version>3.3.2.Beta1</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
             <artifactId>hibernate-core</artifactId>
-            <groupId>org.hibernate</groupId>
-            <version>3.3.2.GA</version>
+            <version>4.3.11.Final</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <artifactId>hibernate-jmx</artifactId>
-            <groupId>org.hibernate</groupId>
-            <version>3.3.2.GA</version>
-            <scope>provided</scope>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.8</version>
         </dependency>
     </dependencies>
 </project>

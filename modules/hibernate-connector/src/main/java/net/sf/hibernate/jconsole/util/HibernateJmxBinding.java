@@ -19,8 +19,8 @@
 
 package net.sf.hibernate.jconsole.util;
 
+import net.sf.hibernate.jconsole.jmx.StatisticsService;
 import org.hibernate.SessionFactory;
-import org.hibernate.jmx.StatisticsService;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
