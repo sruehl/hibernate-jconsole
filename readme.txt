@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/sruehl/hibernate-jconsole.svg?branch=master)](https://travis-ci.org/sruehl/hibernate-jconsole)
 
 Development Setup :: Project Hibernate Console
 ===============================================================================
