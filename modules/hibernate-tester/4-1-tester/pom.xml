@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2011
+  ~
+  ~ This file is part of HibernateJConsole.
+  ~
+  ~     HibernateJConsole is free software: you can redistribute it and/or modify
+  ~     it under the terms of the GNU General Public License as published by
+  ~     the Free Software Foundation, either version 3 of the License, or
+  ~     (at your option) any later version.
+  ~
+  ~     HibernateJConsole is distributed in the hope that it will be useful,
+  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~     GNU General Public License for more details.
+  ~
+  ~     You should have received a copy of the GNU General Public License
+  ~     along with HibernateJConsole.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<packaging>jar</packaging>
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<artifactId>hibernate-tester</artifactId>
+		<groupId>net.sf.hibernate-jconsole.testsuite</groupId>
+		<version>1.0.8-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<artifactId>hibernate-4-1-tester</artifactId>
+	<name>Hibernate Connector Tester :: 4.1 Tester</name>
+
+	<dependencies>
+		<dependency>
+			<artifactId>hibernate-generic-tester</artifactId>
+			<groupId>net.sf.hibernate-jconsole.testsuite</groupId>
+			<version>${project.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>ch.qos.logback</groupId>
+					<artifactId>logback-classic</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<artifactId>hibernate-core</artifactId>
+			<groupId>org.hibernate</groupId>
+			<version>4.1.12.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>0.9.28</version>
+		</dependency>
+	</dependencies>
+
+	<!-- Triggers the building of a CLI tester -->
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-shade-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

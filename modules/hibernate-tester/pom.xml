@@ -42,6 +42,11 @@
 		<module>3-5-tester</module>
 		<module>3-6-tester</module>
 		<module>4-0-tester</module>
+		<module>4-1-tester</module>
+		<module>4-2-tester</module>
+		<module>4-3-tester</module>
+		<module>5-0-tester</module>
+		<module>5-1-tester</module>
 		<module>generic-tester</module>
 	</modules>
 
