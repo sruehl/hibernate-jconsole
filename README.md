@@ -6,7 +6,7 @@ Development Setup :: Project Hibernate Console
 Prerequisites
 -------------
 
-1. Get Git from "https://git-scm.com" and execute the
+1. Get Git from "https://git-scm.com" (or brew install git) and execute the
    following statement to get a local clone:
 
    > git clone git@github.com:sruehl/hibernate-jconsole.git
@@ -17,7 +17,7 @@ Prerequisites
    Set up your environment JAVA_HOME, e.g. with:
    set "JAVA_HOME=$(/usr/libexec/java_home -v 1.7)"
 
-3. Download and install Maven 3.3.9:
+3. Download and install Maven 3.3.9 (or brew install maven):
    http://maven.apache.org/docs/3.3.9/release-notes.html
 
    Note: JAVA_HOME must point to your local JDK-installation.
