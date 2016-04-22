@@ -6,38 +6,33 @@ Development Setup :: Project Hibernate Console
 Prerequisites
 -------------
 
-1. Get Mercurial from "http://mercurial.selenic.com/" and execute the
+1. Get Git from "https://git-scm.com" and execute the
    following statement to get a local clone:
 
-   > hg clone http://hg.code.sf.net/p/hibernate-jcons/code hibernate-jcons-code
+   > git clone git@github.com:sruehl/hibernate-jconsole.git
 
-2. Download and install a JDK version >=  "1.6.xx":
+2. Download and install a JDK version >=  "1.7.xx":
    http://www.oracle.com/technetwork/java/javase/downloads/index.html
 
    Set up your environment JAVA_HOME, e.g. with:
-   set "JAVA_HOME=c:\Program Files\Java\jdk1.6.0"
+   set "JAVA_HOME=$(/usr/libexec/java_home -v 1.7)"
 
-3. Download and install Maven 3.0.4:
-   http://maven.apache.org/docs/3.0.4/release-notes.html
+3. Download and install Maven 3.3.9:
+   http://maven.apache.org/docs/3.3.9/release-notes.html
 
    Note: JAVA_HOME must point to your local JDK-installation.
 
    Verify with:
    > mvn -v
 
-   Apache Maven 3.0.4
-   Maven home: c:\Program Files\Apache\apache-maven-3.0.4
-   Java version: 1.6.0, vendor: Sun Microsystems Inc.
-   Java home: c:\Program Files\Java\jdk1.6.0\jre
+   Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T17:41:47+01:00)
+   Maven home: /usr/local/Cellar/maven/3.3.9/libexec
+   Java version: 1.8.0_45, vendor: Oracle Corporation
+   Java home: /Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre
+   Default locale: de_DE, platform encoding: UTF-8
+   OS name: "mac os x", version: "10.11.2", arch: "x86_64", family: "mac"
 
 4. (Optional) Download an IDE, e.g.:
-
-   - Eclipse / Spring Tool Suite
-     url: http://www.springsource.org/eclipse-downloads
-
-     Open the project with:
-
-        File > Import > Maven > Existing Maven Projects
 
    - IntelliJ IDEA
      url: http://www.jetbrains.com/idea/
@@ -46,6 +41,12 @@ Prerequisites
 
         File > Open > "ROOT/pom.xml".
 
+   - As for the delegate Lombok is used
+     url: https://projectlombok.org
+
+     You can install the plugin in IntelliJ IDEA with:
+
+     Preferences > Plugins > Browse repositories... > Lombok Plugin > Install
 
    Create Run Configuration
 
@@ -73,9 +74,9 @@ Building & Running
 
    - Execute the Jconsole Plugin Hibernate Console:
 
-   > jconsole -pluginpath target/hibernate-jconsole-1.0.7-SNAPSHOT.jar -J-Xdebug\
+   > jconsole -pluginpath target/hibernate-jconsole-*-SNAPSHOT.jar -J-Xdebug\
    -J-Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000\
-   -J-Dhibernate.searchpath=modules/hibernate-tester/3-6-tester/target/lib
+   -J-Dhibernate.searchpath=modules/hibernate-tester/5-1-tester/target/lib
 
    Optional Logging Setup:
    -J-Djava.util.logging.config.file=logging.properties
@@ -83,7 +84,7 @@ Building & Running
 
    - Execute Test Application (that can be monitored)
 
-   > java -jar target/hibernate-3-6-tester-1.0.8-SNAPSHOT-cli.jar
+   > java -jar target/hibernate-5-1-tester-*-SNAPSHOT-cli.jar
 
    Open process connection in the running jconsole choose
    "HibernateContextTester" from the given selection click the last
