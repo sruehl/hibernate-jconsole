@@ -20,6 +20,11 @@
 package net.sf.hibernate.jconsole.tester;
 
 import org.hibernate.Session;
+import org.hibernate.annotations.common.reflection.ReflectionUtil;
+import org.hibernate.metamodel.source.annotations.ReflectionHelper;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 /**
  * Simulates some traffic on the db.
@@ -61,8 +66,13 @@ public class DummyAction {
 	void rollbackTx() {
 		if (session != null && session.isOpen()) {
 			session.getTransaction().rollback();
-			session.close();
-		}
+			// With hibernate 5 close will return void so we need to call it by reflection here
+            try {
+                session.getClass().getDeclaredMethod("close").invoke(session);
+            } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
+                e.printStackTrace();
+            }
+        }
 	}
 
 	void doInsertAndSelect() throws Exception {
